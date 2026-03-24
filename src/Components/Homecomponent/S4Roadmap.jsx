@@ -76,7 +76,7 @@ const Roadmap = () => {
               <div className="cpr-card-line">
                 <div className={`cpr-dot ${item.status === 'active' ? 'cpr-pulse' : ''}`}></div>
               </div>
-              <span className="cpr-q-text"><i className="fa-solid fa-circle" style={{ fontSize: "7px" }}></i> {item.q}</span>
+              <span className="cpr-q-text"><i className="fa-solid fa-circle" style={{ fontSize: "8px",position:"relative", left:"-22px", top:"-5px" }}></i> {item.q}</span>
               <h3 className="cpr-phase-title">{item.phase}</h3>
               <ul className="cpr-item-list">
                 {item.items.map((li, i) => (
@@ -97,7 +97,7 @@ const Roadmap = () => {
           <path d="M0 32.0657C142.222 -7.93433 248.889 -7.93433 320 32.0657C391.111 72.0657 479.278 72.0657 621.5 32.0657C763.722 -7.93433 888.889 -7.93433 960 32.0657C1031.11 72.0657 1137.78 72.0657 1280 32.0657" stroke="url(#cpr-gradient)" strokeWidth="4" strokeLinecap="round"/>
 
       <div className="cpr-svg-wrapper">
-        <svg width="100%" height="85" viewBox="0 0 1280 65" preserveAspectRatio="none" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <svg width="100%" height="65" viewBox="0 0 1280 65" preserveAspectRatio="none" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path d="M0 32.0657C142.222 -7.93433 248.889 -7.93433 320 32.0657C391.111 72.0657 479.278 72.0657 621.5 32.0657C763.722 -7.93433 888.889 -7.93433 960 32.0657C1031.11 72.0657 1137.78 72.0657 1280 32.0657" stroke="url(#cpr-gradient)" strokeWidth="4" strokeLinecap="round"/>
           <defs>
             <linearGradient id="cpr-gradient" x1="0" y1="2.06567" x2="1280" y2="2.06567" gradientUnits="userSpaceOnUse">
