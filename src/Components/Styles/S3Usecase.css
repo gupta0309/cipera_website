@@ -1,0 +1,145 @@
+.vortex-uc-container {
+  background: #000000;
+  color: #ffffff;
+  min-height: 100vh;
+  padding: 60px 0;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: "Inter", sans-serif;
+}
+
+.vortex-uc-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.vortex-uc-pill {
+  border: 1px solid rgba(88, 127, 255, 0.35);
+  padding: 5px 15px;
+  border-radius: 20px;
+  font-size: 14px;
+  background: rgba(88, 127, 255, 0.26);
+  color: #587fff;
+  letter-spacing: 1px;
+}
+
+.vortex-uc-container h1 {
+  font-size: 60px;
+  margin-top: 15px;
+  font-weight: 500;
+}
+
+.vortex-uc-blue-text {
+  color: #587fff;
+  font-style: italic;
+}
+
+.vortex-uc-viewport {
+  width: 92%;
+  height: 600px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  perspective: 1400px;
+  overflow: hidden;
+}
+
+.vortex-uc-track {
+  display: flex;
+  gap: 30px;
+  transform-style: preserve-3d;
+  will-change: transform;
+}
+
+.vortex-uc-card-wrapper {
+  width:240px;
+  height: 300px;
+  position: relative;
+  transform-style: preserve-3d;
+  cursor: pointer;
+  flex-shrink: 0;
+  transition: transform 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.vortex-uc-card-wrapper:hover {
+  transform: scale(1.35) rotateY(0deg) translateZ(280px) !important;
+  z-index: 100;
+}
+
+.vortex-uc-card-inner {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 0.7s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.vortex-uc-card-wrapper:hover .vortex-uc-card-inner {
+  transform: rotateY(180deg);
+}
+
+.vortex-uc-card-face {
+  position: absolute;
+  inset: 0;
+  backface-visibility: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  overflow: hidden;
+}
+
+.vortex-uc-front {
+  background-size: cover;
+  background-position: center;
+}
+
+.vortex-uc-overlay {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: flex-end;
+  padding: 25px;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
+}
+
+.vortex-uc-front h3 {
+  font-size: 1.25rem;
+  color: #ffffff;
+  margin: 0;
+  font-weight: 500;
+}
+
+.vortex-uc-back {
+  background: #0f172a;
+  transform: rotateY(180deg);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 30px;
+  border: 2px solid #587fff;
+  box-shadow: 0 0 40px rgba(88, 127, 255, 0.5);
+}
+
+.vortex-uc-content-container h4 {
+  color: #587fff;
+  margin-bottom: 12px;
+  font-size: 1.4rem;
+}
+
+.vortex-uc-content-container p {
+  color: #94a3b8;
+  line-height: 1.6;
+  font-size: 0.9rem;
+}
+
+@media (max-width: 1024px) {
+  .vortex-uc-container h1 { font-size: 2.8rem; }
+  .vortex-uc-card-wrapper { width: 260px; height: 360px; }
+}
+
+@media (max-width: 768px) {
+  .vortex-uc-container h1 { font-size: 2rem; }
+  .vortex-uc-viewport { perspective: 1200px; height: 550px; }
+  .vortex-uc-card-wrapper { width: 220px; height: 300px; }
+  .vortex-uc-card-wrapper:hover { transform: scale(1.15) rotateY(0deg) translateZ(120px) !important; }
+}

@@ -13,11 +13,11 @@
 }
 
 .cpr-roadmap-badge {
-  border: 1px solid rgba(88, 127, 255, 0.3);
-  padding: 6px 20px;
+  border: 1px solid #587FFF4D;
+  padding: 10px 25px;
   border-radius: 20px;
-  font-size: 12px;
-  color: var(--accent);
+  font-size: 14px;
+  color:#587FFF;
   background: rgba(88, 127, 255, 0.1);
 }
 
@@ -34,10 +34,11 @@
 
 .cpr-roadmap-viewport {
   position: relative;
-  max-width: 1400px;
+  max-width: 1300px;
   margin: 0 auto;
   display: flex;
   align-items: center;
+  padding: 0 50px;
 }
 
 .cpr-roadmap-container {
@@ -59,7 +60,7 @@
   min-width: 320px;
   flex: 0 0 320px;
   position: relative;
-  padding-left: 20px;
+  padding-left: 30px;
 }
 
 /* Custom gradient left border */
@@ -73,9 +74,9 @@
   background: linear-gradient(
     to top,
     transparent 0%,
-    transparent 10%,
-    #000000 10%,
-    #587FFF 96%,
+    transparent 2%,
+    #000000 2%,
+    #587FFF 99%,
     transparent 10%
   );
 }
@@ -101,13 +102,12 @@
 }
 
 .cpr-item-list {
-  list-style: none;
   padding: 0;
 }
 
 .cpr-item-list li {
-  color: #999;
-  font-size: 0.9rem;
+  color: #D8D8D8;
+  font-size: 14px;
   margin-bottom: 8px;
 }
 
@@ -133,6 +133,8 @@
   z-index: 10;
   position: relative;
   top: -20px;
+  margin: 10px;
+  left: -18px;
 }
 
 .cpr-path-dot.cpr-done {
@@ -149,10 +151,10 @@
 
 .cpr-nav-btn {
   background: rgba(255,255,255,0.05);
-  border: 1px solid rgba(255,255,255,0.2);
-  color: #fff;
-  width: 40px;
-  height: 40px;
+  border: 2px solid #587FFF;
+  color: #587FFF;
+  width: 30px;
+  height: 30px;
   border-radius: 50%;
   cursor: pointer;
   z-index: 20;
@@ -164,7 +166,43 @@
 .cpr-next { right: 10px; }
 .cpr-nav-btn:hover { background: var(--accent); }
 
-@media (max-width: 768px) {
-  .cpr-roadmap-card { min-width: 280px; }
-  .cpr-nav-btn { display: none; }
+@media (max-width: 1024px) {
+
+.cpr-nav-btn{
+  display: none;
+}  
+  .cpr-roadmap-title {
+    font-size: 48px;
+  }
+
+  .cpr-roadmap-viewport {
+    padding: 0 20px;
+  }
+
+  .cpr-roadmap-container {
+    gap: 30px;
+  }
+
+  .cpr-roadmap-card {
+    min-width: 300px;
+  }
+}
+@media (max-width: 568px) {
+
+  .cpr-roadmap-container {
+    gap: 16px;
+    padding: 20px 0 100px 0;
+    scroll-snap-type: x mandatory;
+  }
+
+  .cpr-roadmap-card {
+    min-width: 100%;
+    flex: 0 0 100%;
+    scroll-snap-align: center;
+    padding-left: 20px;
+  }
+
+  .cpr-roadmap-title{
+    font-size: 22px;
+  }
 }

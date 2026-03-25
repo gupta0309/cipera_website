@@ -4,6 +4,8 @@ import Header from "../Components/Directives/Header.jsx"
 import Hero from "../Components/Homecomponent/S1Hero.jsx"
 import About from "../Components/Homecomponent/S2About.jsx"
 import Roadmap from "../Components/Homecomponent/S4Roadmap.jsx"
+import UseCase from "../Components/Homecomponent/S3UseCase.jsx"
+
 
 
 function HomePage() {
@@ -30,6 +32,7 @@ function HomePage() {
  <Header/>
  <Hero/>
  <About/>
+ <UseCase/>
  <Roadmap/>
  </>
   );

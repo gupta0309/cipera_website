@@ -18,21 +18,32 @@
   left: 50%;
   min-width: 100%;
   min-height: 100%;
-  width: auto;
-  height: auto;
   transform: translate(-50%, -50%);
   object-fit: cover;
   z-index: 0;
-  opacity: 55%;
+
+  
+
+  filter: 
+    brightness(75%)
+    contrast(115%)
+    grayscale(100%);   
+ 
 }
 
 .cpr-hero-radial-overlay {
   position: absolute;
   inset: 0;
-  background: 
-    radial-gradient(circle, rgba(79, 127, 255, 0.25) 0%, rgba(0, 0, 0, 0.6) 100%),
-    linear-gradient(to bottom, rgba(0,0,0,0.6), rgba(0,0,0,0.9));
   z-index: 1;
+
+  background:
+    radial-gradient(
+      ellipse 60% 60% at center,
+      rgba(88, 127, 255, 0.35) 0%,
+      rgba(30, 64, 175, 0.25) 40%,
+      rgba(0, 0, 0, 0.8) 100%
+    );
+
 }
 
 .cpr-hero-content {
