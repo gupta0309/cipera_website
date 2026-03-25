@@ -110,26 +110,42 @@
 }
 
 .vortex-uc-back {
-  background: #0f172a;
   transform: rotateY(180deg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  /* border: 2px solid #587fff; */
+  /* box-shadow: 0 0 40px rgba(88, 127, 255, 0.4); */
+  overflow: hidden;
+}
+
+.vortex-uc-overlay-back {
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.626);
+  backdrop-filter: blur(1px);
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  padding: 30px;
-  border: 2px solid #587fff;
-  box-shadow: 0 0 40px rgba(88, 127, 255, 0.5);
+  /* justify-content: center; */
+  padding: 10px 20px;
 }
 
 .vortex-uc-content-container h4 {
   color: #587fff;
   margin-bottom: 12px;
-  font-size: 1.4rem;
+  font-size:16px;
+  font-weight: 600;
+    background: linear-gradient(90deg, #FFFFFF 0%, #587FFF 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-transform: uppercase;
 }
 
 .vortex-uc-content-container p {
-  color: #94a3b8;
+  color: #ffffff;
   line-height: 1.6;
-  font-size: 0.9rem;
+  font-size: 14px;
+  font-weight: 300;
 }
 
 @media (max-width: 1024px) {

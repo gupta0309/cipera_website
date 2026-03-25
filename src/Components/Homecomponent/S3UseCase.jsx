@@ -11,27 +11,27 @@ const useCases = [
   {
     title: "Ecosystem Investment",
     img: usecaseone,
-    desc: "Strategic investments into core infrastructure.",
+    desc: " Participate in CIPERA’s growth by holding and using CIP tokens, creating long-term value for users and the ecosystem.",
   },
   {
     title: "Staking & Vesting",
     img: usecasetwo,
-    desc: "Secure yields through network participation.",
+    desc: " Lock tokens to earn rewards while reducing supply and promoting long-term stability.",
   },
   {
     title: "Referral Rewards",
     img: usecasethree,
-    desc: "Incentives for growing the community.",
+    desc: "Earn incentives by inviting new users, with rewards automatically distributed via secure smart contracts, ensuring transparency and consistent passive income.",
   },
   {
     title: "Governance Utility",
     img: usecasefour,
-    desc: "Vote on the future of the protocol.",
+    desc: " CIP holders can vote on key decisions, shaping the future of the ecosystem.",
   },
   {
     title: "Liquidity Participation",
     img: usecasefifth,
-    desc: "Provide liquidity to earn trading fees.",
+    desc: " Provide liquidity to earn rewards while supporting smooth and stable trading.",
   },
 ];
 
@@ -61,7 +61,6 @@ const CiperaCarousel = () => {
         const screenCenter = window.innerWidth / 2;
         const cardCenter = rect.left + rect.width / 2;
         const progress = (cardCenter - screenCenter) / screenCenter;
-
         const absProgress = Math.abs(progress);
 
         gsap.set(card, {
@@ -114,7 +113,7 @@ const CiperaCarousel = () => {
                   className="vortex-uc-card-face vortex-uc-back"
                   style={{ backgroundImage: `url(${item.img})` }}
                 >
-                  <div className="vortex-uc-overlay">
+                  <div className="vortex-uc-overlay-back">
                     <div className="vortex-uc-content-container">
                       <h4>{item.title}</h4>
                       <p>{item.desc}</p>
