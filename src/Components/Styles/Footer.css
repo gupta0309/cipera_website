@@ -197,7 +197,6 @@
     align-items: left;
   }
 
-  /* 👇 IMPORTANT: force columns to behave like blocks */
   .footer-col {
     display: flex;
     flex-direction: column;
