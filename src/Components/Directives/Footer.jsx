@@ -5,9 +5,9 @@ import { FaXTwitter } from "react-icons/fa6";
 
 import logo from "../../assets/HomePage/logofooter.png"; // 🔥 your logo image
 
-const Footer = () => {
+const Footer = ({id}) => {
   return (
-    <footer className="cipera-footer">
+    <footer id={id} className="cipera-footer">
       <div className="footer-container">
 
         {/* LEFT */}
@@ -31,7 +31,7 @@ const Footer = () => {
         <div className="footer-col">
           <h3>Company</h3>
           <a href="#">Home</a>
-          <a href="#">About us</a>
+          <a href="#about">About us</a>
         </div>
 
         {/* RESOURCES */}

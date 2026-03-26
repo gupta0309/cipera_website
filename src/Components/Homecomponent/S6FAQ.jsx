@@ -10,23 +10,23 @@ const faqData = [
   },
   {
     question: "Where can I buy CIP?",
-    answer: "You can buy CIP on supported exchanges and DEX platforms.",
+    answer: "CIP will be available on Uniswap V3 after launch.",
   },
   {
     question: "How can I earn from CIPERA?",
-    answer: "You can earn through staking rewards and ecosystem participation.",
+    answer: "You can earn through staking and liquidity participation.",
   },
   {
     question: "Is CIPERA secure?",
-    answer: "Yes, CIPERA uses blockchain technology ensuring transparency and security.",
+    answer: "Yes, it is built on Ethereum with audited smart contracts.",
   },
   {
     question: "What makes CIPERA unique?",
-    answer: "Its strong ecosystem, utility, and community-driven approach.",
+    answer: "Its focus on real utility, sustainability, and user-driven ecosystem growth.",
   },
 ];
 
-const FAQ = () => {
+const FAQ = ({id}) => {
   const [activeIndex, setActiveIndex] = useState(0);
 
   const toggleFAQ = (index) => {
@@ -34,7 +34,7 @@ const FAQ = () => {
   };
 
   return (
-    <section className="faq-section">
+    <section id={id} className="faq-section">
       <div className="faq-container">
 
         {/* LEFT */}

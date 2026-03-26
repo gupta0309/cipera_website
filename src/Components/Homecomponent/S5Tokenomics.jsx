@@ -4,7 +4,7 @@ import { FaCircle } from "react-icons/fa";
 import { FiCopy } from "react-icons/fi";
 import tokenomics from "../../assets/HomePage/Tokenomcs.png"
 import { useState } from "react";
-const Tokenomics = () => {
+const Tokenomics = ({id}) => {
   const [copied, setCopied] = useState(false);
 
 const handleCopy = () => {
@@ -17,7 +17,7 @@ const handleCopy = () => {
   }, 2000);
 };
   return (
-    <section className="tokenomics-section">
+    <section id={id} className="tokenomics-section">
       <div className="tokenomics-container">
 
         {/* Title */}

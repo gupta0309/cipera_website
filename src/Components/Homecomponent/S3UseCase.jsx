@@ -15,7 +15,7 @@ const useCases = [
   { title: "Liquidity Participation", img: usecasefifth, desc: " Provide liquidity to earn rewards while supporting smooth and stable trading." },
 ];
 
-const CiperaCarousel = () => {
+const CiperaCarousel = ({id}) => {
   const trackRef = useRef(null);
   const displayData = [...useCases, ...useCases, ...useCases];
 
@@ -100,7 +100,7 @@ const CiperaCarousel = () => {
 }, []);
 
   return (
-    <section className="vortex-uc-container">
+    <section id={id} className="vortex-uc-container">
       <div className="vortex-uc-header">
         <span className="vortex-uc-pill">USE CASES</span>
         <h1>Use Cases of <span className="vortex-uc-blue-text">CIPERA</span></h1>

@@ -1,7 +1,7 @@
 import React, { useRef, useEffect, useState } from 'react';
 import '../../Components/Styles/S4Roadmap.css';
 
-const Roadmap = () => {
+const Roadmap = ({id}) => {
   const scrollRef = useRef(null);
   const [isPaused, setIsPaused] = useState(false);
 
@@ -61,7 +61,7 @@ const Roadmap = () => {
   };
 
   return (
-    <section className="cpr-roadmap-section" onMouseEnter={() => setIsPaused(true)} onMouseLeave={() => setIsPaused(false)}>
+    <section id={id} className="cpr-roadmap-section" onMouseEnter={() => setIsPaused(true)} onMouseLeave={() => setIsPaused(false)}>
       <div className="cpr-roadmap-header">
         <span className="cpr-roadmap-badge">ROADMAP</span>
         <h2 className="cpr-roadmap-title">The <span className="cpr-highlight">CIPERA</span> Evolution Plan</h2>

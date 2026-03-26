@@ -4,10 +4,9 @@ import aboutImg from "../../assets/HomePage/About.png";
 import mission from "../../assets/HomePage/vision.png";
 import vision from "../../assets/HomePage/mission.png";
 
-
-const AboutCipera = () => {
+const AboutCipera = ({ id }) => {
   return (
-    <section className="cipera-about-section">
+    <section id={id} className="cipera-about-section">
       <div className="cipera-about-container">
 
         <div className="cipera-about-left">

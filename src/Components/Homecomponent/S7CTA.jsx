@@ -2,9 +2,9 @@ import React from "react";
 import "../Styles/S7CTA.css";
 import bgVideo from "../../assets/HomePage/bg-cta.mp4"; // 🔥 your video file
 
-const CTA = () => {
+const CTA = ({id}) => {
   return (
-    <section className="cta-section">
+    <section id={id} className="cta-section">
       <div className="cta-container">
 
         <div className="cta-box">
