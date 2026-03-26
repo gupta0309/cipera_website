@@ -5,7 +5,22 @@
   position: relative;
   overflow: hidden;
  font-family: "Inter",sans-serif;
+   /* background: url('../../assets/HomePage/bg-roadmap.jpg') center/cover no-repeat ; */
+   
 }
+
+.cpr-roadmap-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+
+  background: url('../../assets/HomePage/bg-roadmap.jpg') center/cover no-repeat;
+
+  opacity: 0.2; /* ✅ 20% opacity */
+
+  z-index: 0;
+}
+
 
 .cpr-roadmap-header {
   text-align: center;
