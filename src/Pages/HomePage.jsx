@@ -5,9 +5,11 @@ import Hero from "../Components/Homecomponent/S1Hero.jsx"
 import About from "../Components/Homecomponent/S2About.jsx"
 import Roadmap from "../Components/Homecomponent/S4Roadmap.jsx"
 import UseCase from "../Components/Homecomponent/S3UseCase.jsx"
-
-
-
+import Tokenomics  from "../Components/Homecomponent/S5Tokenomics.jsx";
+import FAQ from "../Components/Homecomponent/S6FAQ.jsx"
+import CTA from "../Components/Homecomponent/S7CTA.jsx"
+import Marquee from "../Components/Homecomponent/Marquee.jsx";
+import Footer from "../Components/Directives/Footer.jsx";
 function HomePage() {
   const location = useLocation();
 
@@ -31,9 +33,14 @@ function HomePage() {
  <>
  <Header/>
  <Hero/>
+ <Marquee/>
  <About/>
  <UseCase/>
  <Roadmap/>
+ <Tokenomics/>
+ <FAQ/>
+ <CTA/>
+ <Footer/>
  </>
   );
 }

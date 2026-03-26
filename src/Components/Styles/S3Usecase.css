@@ -3,6 +3,7 @@
   color: #ffffff;
   min-height: 100vh;
   padding: 60px 0;
+  padding-bottom: 20px;
   overflow: hidden;
   display: flex;
   flex-direction: column;
@@ -37,35 +38,32 @@
 }
 
 .vortex-uc-viewport {
-  width: 92%;
-  height: 600px;
+  max-width: 100%;
+  height: 500px;
   display: flex;
-  align-items: center;
-  justify-content: center;
-  perspective: 1400px;
-  overflow: hidden;
+  
+  perspective: 2000px;
+  overflow: visible;
+  padding: 0px 100px;
 }
 
 .vortex-uc-track {
   display: flex;
-  gap: 30px;
+  gap: 40px;
   transform-style: preserve-3d;
-  will-change: transform;
+  padding: 40px;
 }
 
 .vortex-uc-card-wrapper {
-  width:240px;
+  width: 240px;
   height: 300px;
   position: relative;
   transform-style: preserve-3d;
-  cursor: pointer;
   flex-shrink: 0;
-  transition: transform 0.4s cubic-bezier(0.23, 1, 0.32, 1);
 }
 
 .vortex-uc-card-wrapper:hover {
-  transform: scale(1.35) rotateY(0deg) translateZ(280px) !important;
-  z-index: 100;
+  z-index: 1000;
 }
 
 .vortex-uc-card-inner {
@@ -73,11 +71,13 @@
   height: 100%;
   position: relative;
   transform-style: preserve-3d;
-  transition: transform 0.7s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  cursor: pointer;
+  /* Critical: Transition only applies when GSAP stops (on hover) */
+  transition: transform 0.6s cubic-bezier(0.23, 1, 0.32, 1);
 }
 
 .vortex-uc-card-wrapper:hover .vortex-uc-card-inner {
-  transform: rotateY(180deg);
+  transform: rotateY(180deg) scale(1.4) translateZ(100px) !important;
 }
 
 .vortex-uc-card-face {
@@ -86,76 +86,107 @@
   backface-visibility: hidden;
   border: 1px solid rgba(255, 255, 255, 0.1);
   overflow: hidden;
+ 
 }
 
-.vortex-uc-front {
-  background-size: cover;
-  background-position: center;
-}
+.vortex-uc-front { background-size: cover; background-position: center; }
 
 .vortex-uc-overlay {
-  height: 100%;
-  width: 100%;
-  display: flex;
-  align-items: flex-end;
+  height: 100%; width: 100%;
+  display: flex; align-items: flex-end;
   padding: 25px;
   background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
 }
 
-.vortex-uc-front h3 {
-  font-size: 1.25rem;
-  color: #ffffff;
-  margin: 0;
-  font-weight: 500;
-}
+.vortex-uc-front h3 { font-size: 1.25rem; color: #ffffff; margin: 0; }
 
-.vortex-uc-back {
-  transform: rotateY(180deg);
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  /* border: 2px solid #587fff; */
-  /* box-shadow: 0 0 40px rgba(88, 127, 255, 0.4); */
-  overflow: hidden;
-}
+.vortex-uc-back { transform: rotateY(180deg); background-size: cover; background-position: center; }
 
 .vortex-uc-overlay-back {
-  height: 100%;
-  width: 100%;
-  background: rgba(0, 0, 0, 0.635);
+  height: 100%; width: 100%;
+  background: rgba(0, 0, 0, 0.712);
   backdrop-filter: blur(1px);
-  display: flex;
-  flex-direction: column;
-  /* justify-content: center; */
-  padding: 10px 20px;
+  display: flex; flex-direction: column;
+  padding: 20px; 
 }
 
 .vortex-uc-content-container h4 {
-  color: #587fff;
-  margin-bottom: 12px;
-  font-size:16px;
-  font-weight: 600;
-    background: linear-gradient(90deg, #FFFFFF 0%, #587FFF 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  color: #587fff; margin-bottom: 12px; font-size: 16px; font-weight: 600;
+  background: linear-gradient(90deg, #FFFFFF 0%, #587FFF 100%);
+  -webkit-background-clip: text; -webkit-text-fill-color: transparent;
   text-transform: uppercase;
 }
 
-.vortex-uc-content-container p {
-  color: #ffffff;
-  line-height: 1.6;
-  font-size: 14px;
-  font-weight: 300;
-}
-
-@media (max-width: 1024px) {
-  .vortex-uc-container h1 { font-size: 55px; }
-  .vortex-uc-card-wrapper { width: 200px; height: 300px; }
-}
-
+.vortex-uc-content-container p { color: #ffffff; line-height: 1.4; font-size: 13px; font-weight: 300; }
+/* MOBILE SLIDER */
 @media (max-width: 768px) {
-  .vortex-uc-container h1 { font-size: 2rem; }
-  .vortex-uc-viewport { perspective: 1200px; height: 550px; }
-  .vortex-uc-card-wrapper { width: 220px; height: 300px; }
-  .vortex-uc-card-wrapper:hover { transform: scale(1.15) rotateY(0deg) translateZ(120px) !important; }
+.vortex-uc-container h1 {
+font-size: 22px;
+}
+  .vortex-uc-viewport {
+    overflow-x: auto;
+    overflow-y: hidden;
+    padding: 0 20px;
+    scroll-snap-type: x mandatory;
+  }
+
+  .vortex-uc-track {
+    transform: none !important;
+    padding: 20px 0;
+  }
+
+  .vortex-uc-card-wrapper {
+    flex: 0 0 auto;
+    scroll-snap-align: center;
+  }
+
+  /* 🔥 CLICK FLIP */
+.vortex-uc-card-wrapper.active .vortex-uc-card-inner {
+  transform: rotateY(180deg) scale(1) !important;
+}
+}
+
+@media (max-width: 480px) {
+  .vortex-uc-viewport {
+    padding: 0;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+  }
+
+  .vortex-uc-track {
+    gap: 16px; /* 🔥 fixed + better spacing */
+    padding: 20px 0;
+  }
+
+  .vortex-uc-card-wrapper {
+  width: 98%;
+  flex: 0 0 98%;
+  max-width: 98%;
+}
+
+  .vortex-uc-card-inner {
+    width: 100%;
+    height: 100%;
+    transform: none !important;
+  }
+
+  .vortex-uc-card-face {
+    width: 100%;
+    height: 100%;
+  }
+
+  /* disable hover flip */
+  .vortex-uc-card-wrapper:hover .vortex-uc-card-inner {
+    transform: none !important;
+  }
+
+  /* click flip only */
+  .vortex-uc-card-wrapper.active .vortex-uc-card-inner {
+    transform: rotateY(180deg) !important;
+  }
+
+  /* bring active card above */
+  .vortex-uc-card-wrapper.active {
+    z-index: 9999;
+  }
 }
