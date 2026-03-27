@@ -1,6 +1,6 @@
 .cipera-about-section {
   background: #000000;
-  padding: 80px 20px;
+  padding: 40px 20px;
   color: #ffffff;
   font-family: "Inter", sans-serif;
   align-items: center;
@@ -64,8 +64,8 @@
 }
 
 .cipera-about-desc {
-  font-size: 16px;
-  line-height: 23px;
+  font-size: 15px;
+  line-height: 23.5px;
   font-weight: 500;
   color: #C8C8C8;
   margin-bottom: 30px;
@@ -104,9 +104,9 @@
 
 .cipera-card-box p {
   font-size: 13px;
-  font-weight: 400;
-  color: #DEDEDE;
-  line-height:100%;
+  font-weight: 500;
+  color: #dededee2;
+  line-height:18px;
 }
 
 @media (max-width: 1370px) {
@@ -138,6 +138,10 @@
 
 
 @media (max-width: 768px) {
+  .cipera-about-section{
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
   .cipera-about-container {
     flex-direction: column-reverse;
     text-align: left;
@@ -150,6 +154,9 @@
 
   .cipera-about-right {
     margin-top: 30px;
+  }
+  .heading-icon{
+    display: flex;
   }
 }
 

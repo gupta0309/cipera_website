@@ -3,7 +3,7 @@
   /* max-width: 1200px;   🔥 control width */
   margin: 0 auto;      /* center align */
   overflow: hidden;
-  padding: 20px 0;              
+  padding: 10px 0;              
   background: #000000;
 
 }
@@ -24,8 +24,7 @@
   border: 1px solid transparent;
 
   background: 
-    linear-gradient(#020617, #020617) padding-box,
-    
+    linear-gradient(90deg, #000000 0%, #00040B 100%) padding-box,
     linear-gradient(
       277.72deg,
       #587FFF 0%,
@@ -35,7 +34,6 @@
     ) border-box;
 
   backdrop-filter: blur(6px);
-  transition: 0.3s ease;
 }
 
 .marquee-item img {

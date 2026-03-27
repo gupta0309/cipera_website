@@ -184,7 +184,7 @@
   .footer-container {
     grid-template-columns: 1fr;
     gap: 25px;
-    text-align: left;
+    text-align: center;
   }
 
   /* 🔥 ALL FULL WIDTH (including Company & Resources) */
@@ -193,8 +193,8 @@
   .footer-right {
     grid-column: span 1;
     width: 100%;
-    text-align:left;
-    align-items: left;
+    text-align:center;
+    align-items: center;
   }
 
   .footer-col {

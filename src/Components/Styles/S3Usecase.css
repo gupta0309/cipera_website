@@ -1,9 +1,9 @@
 .vortex-uc-container {
   background: #000000;
   color: #ffffff;
-  min-height: 100vh;
+  min-height: 80vh;
   padding: 60px 0;
-  padding-bottom: 20px;
+  padding-bottom: 10px;
   overflow: hidden;
   display: flex;
   flex-direction: column;
@@ -24,6 +24,7 @@
   background: #587FFF1A;
   color: #587fff;
   letter-spacing: 1px;
+  margin-bottom: 15px;
 }
 
 .vortex-uc-container h1 {

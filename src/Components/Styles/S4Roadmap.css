@@ -16,7 +16,7 @@
 
   background: url('../../assets/HomePage/bg-roadmap.jpg') center/cover no-repeat;
 
-  opacity: 0.2; /* ✅ 20% opacity */
+  opacity: 0.2; 
 
   z-index: 0;
 }
@@ -49,11 +49,12 @@
 
 .cpr-roadmap-viewport {
   position: relative;
-  max-width: 1300px;
+  max-width: 1200px;
   margin: 0 auto;
   display: flex;
   align-items: center;
-  padding: 0 50px;
+  overflow: hidden;
+  padding: 0 ;
 }
 
 .cpr-roadmap-container {
@@ -157,10 +158,10 @@
 }
 
 .cpr-svg-wrapper {
-  position: absolute;
+  position: relative;
   bottom: 85px;
-  left: 0;
-  width: 100%;
+  width: 80%;
+  margin: auto;
   pointer-events: none;
 }
 
@@ -174,7 +175,7 @@
   cursor: pointer;
   z-index: 20;
   transition: 0.3s;
-  position: absolute;
+  left: -60px;
 }
 
 .cpr-prev { left: 10px; }

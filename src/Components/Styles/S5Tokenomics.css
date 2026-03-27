@@ -126,6 +126,7 @@
   flex-direction: column;
   gap: 14px;
   margin-top: 20px;
+  
 }
 
 /* Each row */
@@ -237,10 +238,10 @@ background: linear-gradient(93deg, rgba(49, 69, 140, 0.4) -16.28%, #000000 53.95
 @media (max-width: 1100px) {
 .tokenomics-header h2{
   font-size: 40px;
-  text-align: left;
+  text-align: center;
 }
 .tokenomics-header{
-  text-align: left;
+  text-align: center;
 }
 .badge{
   display: inline-block;
@@ -281,16 +282,29 @@ background: linear-gradient(93deg, rgba(49, 69, 140, 0.4) -16.28%, #000000 53.95
     grid-template-columns: 1fr 1fr;
   }
   .row{
+    justify-items: center;
     grid-template-columns: 1fr 1fr 1fr;
   }
   .tokenomics-details h3,.contract-section h3{
     font-size: 20px;
+    text-align: center;
+  }
+  .tokenomics-details p {
+    text-align: center;
   }
   .contract-box code{
     font-size: 16px;
   }
   .token-info{
-    padding-left: 50px;
+    /* padding-left: 50px; */
+    width: 70%;
+    margin: auto;
+  }
+  .chart-circle{
+    text-align: center;
+  }
+  .chart-circle img{
+    max-width: 250px;
   }
 }
 
@@ -320,4 +334,14 @@ background: linear-gradient(93deg, rgba(49, 69, 140, 0.4) -16.28%, #000000 53.95
   .token-info{
 
     padding-left: 0px;}
+
+  .contract-box code{
+    font-size: 10px;
+  }
+  .contract-box{
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
   }

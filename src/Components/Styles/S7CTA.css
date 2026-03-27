@@ -17,7 +17,7 @@
   padding: 60px 40px;
   text-align: center;
 
-  border: 1px solid rgba(88, 127, 255, 0.4);
+  border: 1px solid #FFFFFF45;
 }
 
 /* VIDEO */
@@ -95,7 +95,7 @@
   margin-top: 20px;
   font-size: 16px;
   color: #CDD4DE;
-  font-size: 400;
+font-weight: 400;
 }
 
 /* ================= RESPONSIVE ================= */

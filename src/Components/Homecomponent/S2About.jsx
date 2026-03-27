@@ -24,15 +24,16 @@ const AboutCipera = ({ id }) => {
 
           <p className="cipera-about-desc">
             CIPERA is a utility-driven ERC-20 token created to deliver real use cases
-            within a scalable and secure blockchain ecosystem. It combines technology,
+            within a scalable and secure blockchain ecosystem. <p style={{margin:"0"}}>It combines technology,
             transparency, and user participation to create a platform where value is
-            not just traded — but created.
+            not just traded — but created.</p>
           </p>
 
           <div className="cipera-about-cards">
             <div className="cipera-card-box">
+              <div className="heading-icon">
               <div className="cipera-card-icon"><img src={mission} alt="mission"/></div>
-              <h3>Our Mission</h3>
+              <h3>Our Mission</h3></div>
               <p>
                 To build a decentralized ecosystem that empowers users with financial
                 tools, passive earning opportunities, and transparent systems.
@@ -40,8 +41,9 @@ const AboutCipera = ({ id }) => {
             </div>
 
             <div className="cipera-card-box">
+              <div className="heading-icon">
               <div className="cipera-card-icon"><img src={vision} alt="vision"/></div>
-              <h3>Our Vision</h3>
+              <h3>Our Vision</h3></div>
               <p>
                 To become a leading utility token in the DeFi space by delivering
                 real-world applications and sustainable growth.
